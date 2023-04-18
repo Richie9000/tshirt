@@ -15,12 +15,17 @@ const Customizer = () => {
     <AnimatePresence>
       {!snap.intro && (
         <div>
-          <motion.div key="custom" className='absolute top-0 left-o z-10' {...slideAnimation("left")} >
+          <motion.div 
+          key="custom" 
+          className='absolute top-0 left-0 z-10' {...slideAnimation("left")} >
             <div className="flex items-center min-h-screen">
-            <div className="editorstab-container tabs">
+            <div className="editortabs-container tabs">
 
               {EditorTabs.map((tab)=> (
-              <Tab key={tab.name} tab={tab} handleClick={() => {}} />
+              <Tab 
+              key={tab.name} 
+              tab={tab} 
+              handleClick={() => {}} />
               ))}
             </div>
             </div>
@@ -34,7 +39,12 @@ const Customizer = () => {
 
           <motion.div className='filtertabs-container' {...slideAnimation("up")}>
              {FilterTabs.map((tab)=> (
-              <Tab key={tab.name} tab={tab} isFilterTab isActiveTab="" handleClick={() => {}} />
+              <Tab 
+              key={tab.name} 
+              tab={tab} 
+              isFilterTab 
+              isActiveTab="" 
+              handleClick={() => {}} />
               ))}
           </motion.div>
         </div>
